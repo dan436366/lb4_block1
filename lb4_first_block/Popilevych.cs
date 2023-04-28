@@ -17,7 +17,7 @@ namespace lb4_popilevych_block1
                 }
             }
             Array.Resize(ref newArray, cnt);
-            array = newArray;
+            array = newArray; //perevirka
         }
     }
 }
