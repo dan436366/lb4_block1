@@ -8,6 +8,22 @@ namespace Lab4
 {
     internal class example1
     {
+        static void InputRandom(int countOfElements, ref int[] array)
+        {
+            Random random = new Random();
+            for (int i = 0; i < countOfElements; i++)
+            {
+                array[i] = random.Next(-100, 100);
+            }
+        }
+        static void Input_ByHand(int countOfElements, ref int[] array)
+        {
+            string[] rowOfArray = Console.ReadLine().Trim().Split();
+            for (int i = 0; i < countOfElements; i++)
+            {
+                array[i] = Convert.ToInt32(rowOfArray[i]);
+            }
+        }
         public static void Block_1()
         {
             Console.WriteLine("Введiть прiзвище студента, варiант якого хочете виконати. Для завершення виконання варiанту програми введiть 0. ");
