@@ -8,6 +8,28 @@ namespace Lab4
 {
     internal class example1
     {
+        public static void Choose_The_Way_To_Fill(int countOfElements, ref int[] array)
+        {
+            Console.WriteLine("Натиснiть 1, якщо бажаєте заповнити масив випадковим чином");
+            Console.WriteLine("Натиснiть 2, якщо бажаєте заповнити масив вручну в одному рядку");
+            int choiceOfInput = Convert.ToInt32(Console.ReadLine());
+            switch (choiceOfInput)
+            {
+                case 1:
+                    InputRandom(countOfElements, ref array);
+                    Console.Write("Початковий масив: ");
+                    for (int i = 0; i < countOfElements; i++)
+                    {
+                        Console.Write(array[i] + " ");
+                    }
+                    Console.WriteLine();
+                    break;
+                case 2:
+                    Console.Write("Введiть масив:");
+                    Input_ByHand(countOfElements, ref array);
+                    break;
+            }
+        }
         static void InputRandom(int countOfElements, ref int[] array)
         {
             Random random = new Random();
@@ -22,6 +44,21 @@ namespace Lab4
             for (int i = 0; i < countOfElements; i++)
             {
                 array[i] = Convert.ToInt32(rowOfArray[i]);
+            }
+        }
+       static void PrintArray(int[] array)
+        {
+            if (array.Length == 0)
+            {
+                Console.WriteLine("Масив порожній");
+            }
+            else
+            {
+                for (int i = 0; i < array.Length; i++)
+                {
+                    Console.Write(array[i] + " ");
+                }
+                Console.WriteLine();
             }
         }
         public static void Block_1()
