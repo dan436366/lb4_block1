@@ -46,9 +46,7 @@ namespace lb4_krasilnikov_block1
                 Console.WriteLine("Масив порожній, виконати дію неможливо...");
             }
 
-		//something
-
-//something one more
+            //something
         }
     }
 }
