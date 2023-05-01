@@ -33,9 +33,8 @@ namespace lb4_zaichyk_block1
                     new_arr[i] = array[i + t];
                 }
                 array = new_arr;
-
-            }//фыв
-
+//что-то
+            }
         }
     }
 }
